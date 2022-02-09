@@ -1,0 +1,16 @@
+.header >   a{
+   padding: 5px 8px;
+   margin: 4px;
+   border-radius: 50%;
+   font-size: 10;
+   background-color: #212431;
+   color: cornsilk;
+   transition: 0.3s;
+}
+.header > a:hover{
+  background-color:#0a58ca;
+  
+}
+.navbar{
+  background-color: #040b14;
+}
