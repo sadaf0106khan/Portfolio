@@ -1,3 +1,29 @@
-<div class="h-100" id="work-experience">
-<p>work-experience works!</p>
+<div class="section" id="work-experience">
+  <h5 class="title">My Work Experience</h5>
+  <ul class="card-list">
+    <li *ngFor="let exp of experiences">
+      <button class="list-btn" (click)="selectExp(exp.id)" data-bs-toggle="modal" data-bs-target="#workExpModal">{{exp.title}} <i class="bi bi-arrow-right-short"></i></button>
+    </li>
+  </ul>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="workExpModal" tabindex="-1" aria-labelledby="workExpModalLabel" aria-hidden="true">
+  <div class="modal-dialog mw-100 m-5">
+    <div class="modal-content bg-dark">
+      <div class="modal-header justify-content-end">
+        <button class="bttn icon-bttn" data-bs-toggle="modal" data-bs-target="#workExpModal"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="row align-items-center p-4">
+          <div class="col content">
+            <h3>{{experiences[selected].title}}</h3>
+            <p>{{experiences[selected].subtitle}}</p>
+            <p *ngFor="let con of experiences[selected].content">{{con}}</p>
+            <button class="bttn">Like this <i class="bi bi-hand-thumbs-up-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

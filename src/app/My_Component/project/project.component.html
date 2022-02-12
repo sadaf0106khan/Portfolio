@@ -1,3 +1,51 @@
-<div class="vh-100" id="project">
-<p>project works!</p>
+<div class="section" id="project">
+  <h5 class="title">My Projects</h5>
+  <ul class="card-list">
+    <li *ngFor="let project of projects">
+      <button (click)="selectProject(project.id)" class="list-btn" data-bs-toggle="modal" data-bs-target="#projectModal">{{project.title}} <i class="bi bi-arrow-right-short"></i></button>
+    </li>
+  </ul>
 </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog mw-100 m-5">
+      <div class="modal-content bg-dark">
+        <div class="modal-header justify-content-end">
+          <button class="bttn icon-bttn" data-bs-toggle="modal" data-bs-target="#projectModal"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center p-4">
+            <div class="col-lg-6">
+              <div id="carouselProject" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img [src]="projects[selected].images[0]" class="d-block w-100" alt="...">
+                  </div>
+                  <ng-container *ngFor="let image of projects[selected].images; index as i">
+                    <div *ngIf="i!=0" class="carousel-item">
+                      <img [src]="image" class="d-block w-100" alt="...">
+                    </div>
+                  </ng-container>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 content">
+              <h3>{{projects[selected].title}}</h3>
+              <p *ngFor="let con of projects[selected].content">{{con}} </p>
+              <button class="bttn">Like this <i class="bi bi-hand-thumbs-up-fill"></i></button>
+              <a class="bttn" [href]="projects[selected].link" target="blank" >View Project <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,81 +1,52 @@
-<div class="container-fluid">
-  <div class="row flex-nowrap">
-      <div class=" navbar col-auto col-md-4  col-xl-3 px-sm-2 px-0 position-fixed ">
-          <div class="d-flex flex-column align-items-center align-items-sm-start px- 3 pt-2 text-white min-vh-100 w-100">
-            <div class="d-flex flex-column align-items-center pb-3  text-white text-decoration-none  w-100"> 
-            
-               
-                <img src="assets/image.jpeg" class="img-fluid rounded-circle " height="100" width="100">
-             <h1 class="pt-4"> Sadaf Khan </h1>
-             <div class=" header d-flex flex-row  ">
-             <a href=""><i class="bi bi-linkedin"></i></a>
-             <a href=""><i class="bi bi-envelope-fill"></i></a>
-             <a href=""><i class="bi bi-instagram"></i></a>
-             <a href=""><i class="bi bi-github"></i></a>
-               </div>    
-             
-            </div>
-
-
-              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start ps-3" id="menu">
-                  <li class="nav-item">
-                      <a (click)="onclickScroller('home')" routerLinkActive="active" class="nav-link align-middle px-0">
-                          <i class="bi bi-house-fill"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a (click)="onclickScroller('about')"  data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                          <i class="bi bi-person-fill text-primary"></i> <span class="ms-1 d-none d-sm-inline">About</span> </a>
-                     
-                  </li>
-                  <li>
-                      <a (click)="onclickScroller('work-experience')" class="nav-link px-0 align-middle">
-                          <i class="bi bi-file-earmark-text"></i> <span class="ms-1 d-none d-sm-inline">Work Experience</span></a>
-                  </li>
-                  <li>
-                      <a (click)="onclickScroller('project')"  data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                          <i  class="bi bi-menu-button-wide-fill"></i> <span class="ms-1 d-none d-sm-inline">Projects</span></a>
-                     
-                  </li>
-                  <li>
-                      <a (click)="onclickScroller('skill')"  data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                        <i class="bi bi-stack"></i> <span class="ms-1 d-none d-sm-inline">Skills</span> </a>
-                         
-                  </li>
-                  <li>
-                      <a (click)="onclickScroller('contact')"  class="nav-link px-0 align-middle">
-                          <i  class="bi bi-envelope-fill"></i> <span class="ms-1 d-none d-sm-inline">Contact</span> </a>
-                  </li>
-              </ul>
-              <hr>
-              <div class="dropdown pb-4">
-                  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">loser</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                      <li><a class="dropdown-item" href="#">New project...</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-              </div>
-          </div>
+<div class="container-fluid bg-dark">
+  <nav class="nav">  
+    <ul class="d-flex flex-row">
+      <li class="nav-item">
+        <a class="nav-link" (click)="onclickScroller('about')">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onclickScroller('skill')"> Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onclickScroller('work-experience')"> Work Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onclickScroller('project')">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onclickScroller('contact')"> Contact Me</a>
+      </li>   
+    </ul>
+  </nav>
+  <div class="row pt--50">
+    <div class="col-lg-6 px-5">
+      <div class="sticky-section">
+        <img src="assets/image.jpeg" class="rounded-circle banner-img">
+        <h1 class="heading">
+            Hi, I'm 
+            <span class="name">Sadaf Khan</span>
+            <br>
+            <span class="desc">Full Stack Developer</span>
+        </h1>
+        <p>I'm the Front-End Developer for #Company in India, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
+        <button class="bttn">Download My CV</button>
+        <button class="bttn">Hire Me</button>  
+        <div class="social d-flex flex-row ms-5">
+          <a href=""><i class="bi bi-sm bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-envelope-fill"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-github"></i></a>
+        </div>  
+      </div>  
+    </div>
+    <div class="col-lg-6 py-3">
+      <div class="scroll-section">
+        <app-about></app-about>
+        <app-skill></app-skill>
+        <app-work-experience></app-work-experience>
+        <app-project></app-project>    
+        <app-contact></app-contact>
       </div>
-
-
-
-      <div class="col py-3 offset-auto offset-md-4 offset-xl-3">
-        <app-home></app-home>
-          <app-about></app-about>
-          <app-work-experience></app-work-experience>
-          <app-project></app-project>
-          <app-skill></app-skill>
-          <app-contact></app-contact>
-
-      </div>
+    </div>
   </div>
 </div>
