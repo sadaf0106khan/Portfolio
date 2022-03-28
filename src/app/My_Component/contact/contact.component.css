@@ -28,3 +28,8 @@ textarea{
   height: 120px !important;
   padding: 5px 15px !important;
 }
+.alert{
+  position: fixed;
+  top: 0;
+  right: 0;
+}
