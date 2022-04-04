@@ -20,11 +20,11 @@
               <div id="carouselProject" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img [src]="projects[selected].images[0]" class="d-block w-100" alt="...">
+                    <img [src]="projects[selected].images[0]" class="d-block w-100 h-100" alt="...">
                   </div>
                   <ng-container *ngFor="let image of projects[selected].images; index as i">
                     <div *ngIf="i!=0" class="carousel-item">
-                      <img [src]="image" class="d-block w-100" alt="...">
+                      <img [src]="image" class="d-block w-100 h-100" alt="...">
                     </div>
                   </ng-container>
                 </div>
@@ -41,7 +41,7 @@
             <div class="col-lg-6 content">
               <h3>{{projects[selected].title}}</h3>
               <p *ngFor="let con of projects[selected].content">{{con}} </p>
-              <button class="bttn">Like this <i class="bi bi-hand-thumbs-up-fill"></i></button>
+              <button class="bttn"  >Github Code <i class="bi bi-github"></i></button>
               <a class="bttn" [href]="projects[selected].link" target="blank" >View Project <i class="bi bi-chevron-right"></i></a>
             </div>
           </div>
