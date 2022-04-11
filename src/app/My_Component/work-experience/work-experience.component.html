@@ -18,9 +18,9 @@
         <div class="row align-items-center p-4">
           <div class="col content">
             <h3>{{experiences[selected].title}}</h3>
-            <p>{{experiences[selected].subtitle}}</p>
+            <p>{{experiences[selected].subtitle}} ({{experiences[selected].duration}})</p>
             <p *ngFor="let con of experiences[selected].content">{{con}}</p>
-            <button class="bttn">Tech Used: <i class="bi bi-hdd-stack-fill"></i></button>
+            <button class="bttn">Like <i class="bi bi-hand-thumbs-up-fill"></i></button>
           </div>
         </div>
       </div>

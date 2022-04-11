@@ -10,7 +10,7 @@ export class ProjectComponent implements OnInit {
     {
       id: 0,
       title: 'Hospi Project',
-      
+      tech: ['Angular 13', '.Net Core', 'Sql Server', 'HTML5', 'CSS3', 'Bootstrap5'],
       content: [
         
       'Implemented an Admin Dashboard for Hospital in which user can perform CURD operations on appointments, patients, payments , departments and doctors ',
@@ -23,22 +23,26 @@ export class ProjectComponent implements OnInit {
         'assets/medic-department.png',
         'assets/medic-doctor.png'
       ],
-      link: 'https://sadaf0106khan.github.io/Medic-App'
+      link: 'https://sadaf0106khan.github.io/Medic-App',
+      github: 'https://github.com/sadaf0106khan/Medic-App'
     },
     {
       id: 1,
-      title: 'Blog Project ',
+      title: 'Portfolio',
+      tech: ['Angular 13', 'HTML5', 'CSS3', 'Bootstrap5'],
       content: [
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eius cum exercitationem tempore id dicta aliquid dolorum assumenda nihil! Dolorem fugit aliquid repudiandae delectus ipsam? ',
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eius cum exercitationem tempore id dicta aliquid dolorum assumenda nihil! Dolorem fugit aliquid repudiandae delectus ipsam? '
+        'Created a personal portfolio using Angular 13 Bootstrap 5 which is responsive and interactive',
+        'It has about me projects work experience skills and contact me section.',
+        'In contact me section I have used formspree to send users messages to me on email.'
       ],
       images: [
-        'assets/medic-dashboard.png',
-        'assets/medic-appointment.png',
-        'assets/medic-department.png',
-        'assets/medic-doctor.png'
+        'assets/portfolio1.png',
+        'assets/portfolio2.png',
+        'assets/portfolio3.png',
+        'assets/portfolio4.png'
       ],
-      link: 'https://sadaf0106khan.github.io/Medic-App'
+      link: 'https://sadaf0106khan.github.io/Portfolio',
+      github: 'https://github.com/sadaf0106khan/Portfolio'
     }
   ]
   selected = 0

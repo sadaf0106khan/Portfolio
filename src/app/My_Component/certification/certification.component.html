@@ -1,0 +1,8 @@
+<div class="section" id="certification">
+    <h5 class="title">My Certifications</h5>
+    <ul class="card-list">
+      <li *ngFor="let cert of certifications">
+        <a class="list-btn" [href]="cert.url" target="_blank">{{cert.title}} <i class="bi bi-arrow-right-short"></i></a>
+      </li>
+    </ul>
+  </div>

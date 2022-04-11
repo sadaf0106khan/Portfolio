@@ -40,8 +40,9 @@
             </div>
             <div class="col-lg-6 content">
               <h3>{{projects[selected].title}}</h3>
-              <p *ngFor="let con of projects[selected].content">{{con}} </p>
-              <button class="bttn"  >Github Code <i class="bi bi-github"></i></button>
+              <span *ngFor="let tech of projects[selected].tech" class="badge rounded-pill bg-dark px-2 py-2 mb-3 mx-1">{{tech}}</span>
+              <p class="detail" *ngFor="let con of projects[selected].content">{{con}} </p>
+              <a class="bttn" [href]="projects[selected].github" target="blank">Github Code <i class="bi bi-github"></i></a>
               <a class="bttn" [href]="projects[selected].link" target="blank" >View Project <i class="bi bi-chevron-right"></i></a>
             </div>
           </div>

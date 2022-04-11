@@ -9,7 +9,8 @@ export class WorkExperienceComponent implements OnInit {
   experiences = [
     {
       id: 0,
-      title: 'Software Developer', subtitle: 'GoodEd Technologies Pvt. Ltd', content: [
+      title: 'Software Developer', subtitle: 'GoodEd Technologies Pvt. Ltd', duration: 'Mar 2021-Feb 2022',
+      content: [
       'Working extensively in development with creativity and implementing the ways to improve educational value of the product with technical solutions.',
       '1. Increased the traffic in neetprep.com by 25.52% by adding Learning vedios in the pages.',
       '2. Implemented redirection of show answer and courses links to take trial courses so that more users take trial courses.',
@@ -19,7 +20,8 @@ export class WorkExperienceComponent implements OnInit {
     },
     {
       id: 1,
-      title: 'Full Stack Developer Intern', subtitle: 'GoodEd Technologies Pvt. Ltd', content: [
+      title: 'Full Stack Developer Intern', subtitle: 'GoodEd Technologies Pvt. Ltd', duration: 'Feb 2021-Mar 2021',
+      content: [
         
         'I worked in backend and frontend technologies with Angular, ASP.Net Core , Entity Framework Core and SQL Server in my project . Implemented and launched new features. Eagerly learnt new technologies and methodologies.',
         ' Implemented the faster loading of target and Dpps pages by adding pagination.'
@@ -28,7 +30,8 @@ export class WorkExperienceComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Backend Developer Intern', subtitle: 'Croptr Technologies Pvt. Ltd', content: [
+      title: 'Backend Developer Intern', subtitle: 'Croptr Technologies Pvt. Ltd', duration: 'Jan 2020-Jun 2020', 
+      content: [
      
       'I worked in backend technologies with .Net core ,SQL Server, Web API , C# etc'
       ]

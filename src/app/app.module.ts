@@ -10,7 +10,9 @@ import { WorkExperienceComponent } from './My_Component/work-experience/work-exp
 import { ProjectComponent } from './My_Component/project/project.component';
 import { SkillComponent } from './My_Component/skill/skill.component';
 import { ContactComponent } from './My_Component/contact/contact.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CertificationComponent } from './My_Component/certification/certification.component';
 
 
 
@@ -24,12 +26,15 @@ import { FormsModule } from '@angular/forms';
     ProjectComponent,
     SkillComponent,
     ContactComponent,
+    CertificationComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
